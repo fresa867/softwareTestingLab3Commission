@@ -1,0 +1,28 @@
+	<div class="row">
+		<h2>Reports</h2>
+		<table>
+			<tr>
+			  <th>Year</th>
+			  <th>Month</th>
+			  <th>Locks sold</th>
+			  <th>Stocks sold</th>
+			  <th>Barrels sold</th>
+			  <th>Total sales</th>
+			  <th>Commission</th>
+			</tr>
+			<tr ng-repeat='sum in report'>
+			  <td>{{sum.year}}</td>
+			  <td>{{sum.month}}</td>
+			  <td>{{sum.totalLocksSold}}
+        	  </td>
+			  <td>{{sum.totalStocksSold}}</td>
+			  <td>{{sum.totalBarrelsSold}}</td>
+			  <td>{{sum.totalSales}}</td>
+			  <td>{{sum.commission}}</td>
+			</tr>
+		</table>
+
+		<a href="#/submitSales"><button ng-click='submitSales(town,locks,stocks,barrels)'>Back</button></a>
+		<a href="#/salesReport"><button ng-click='getReport()'>Get reports</button></a>
+
+	<div>
